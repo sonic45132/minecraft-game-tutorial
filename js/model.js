@@ -538,7 +538,7 @@ var MSP = (function (global, undefined) {
 	};
 	
 	var defaultImages = [
-		'images/icemonster.png',
+		'images/Climber.png',
 	];
 	
 	skin.src = defaultImages[Math.floor(Math.random()*defaultImages.length)];

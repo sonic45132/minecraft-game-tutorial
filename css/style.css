@@ -207,7 +207,7 @@ form[name*=imageform] {
     width: 64px;
     height: 62px;
     margin-bottom: 10px;
-    background: url(http://www.apexminecraft.com/skin/diamond-block.png);
+    background: url(../images/diamond-block.png);
     background-repeat: no-repeat; }
     #user_ui #user_score span {
       position: absolute;
@@ -223,7 +223,7 @@ form[name*=imageform] {
     height: 48px;
     margin-bottom: 10px;
     margin-left: 20px;
-    background: url(http://www.apexminecraft.com/skin/diamond-color.png);
+    background: url(../images/diamond-color.png);
     -webkit-animation: spin 20s ease-in-out infinite;
     /* Safari 4+ */
     -moz-animation: spin 20s ease-in-out infinite;
