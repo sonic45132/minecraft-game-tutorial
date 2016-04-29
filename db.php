@@ -1,4 +1,4 @@
 <?php
-      $conn = mysql_connect('localhost', 'user', 'pwd');
-      $db   = mysql_select_db('table_name');
+      $conn = new mysqli('localhost', 'leader', 'password');
+      $db   = mysqli_select_db ($conn, 'apex_leaderboard');
 ?>
