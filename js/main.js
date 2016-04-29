@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
                 "target": "#two_xp"
             },
             {
-                "content": "Well done.<br/><span class='sub-text'>Play our site to learn and get rewards</span><label><input type='radio' name='boolean' value='true'/>True</label><label><input type='radio' name='boolean' value='false'/>False</label> ",
+                "content": "Well done.<br/><span class='sub-text'>Play our site to learn and get rewards</span><label><input type='radio' name='boolean' value='true'/>True</label><label><input type='radio' name='boolean' value='false'/>False</label><a hreh='#'>Submit</a",
                 "target": "#three_xp",
                 "answer":"true"
             },
@@ -111,15 +111,15 @@ jQuery(document).ready(function(){
         }
         function diamonds(usersXp) {
         
-                jQuery(".user_xp").remove();
-                for ( var i = 0; i < usersXp; i++ ) {
-                    // build diamonds
-                    jQuery("#user_ui").prepend("<div class='user_xp'></div>");
-                }
-                for ( var i = usersXp; i < totalXp; i++ ) {
-                    // build gray diamonds
-                    jQuery("#user_ui").prepend("<div class='user_xp' style='opacity:.1;'></div>");
-                }
+            jQuery(".user_xp").remove();
+            for ( var i = 0; i < usersXp; i++ ) {
+                // build diamonds
+                jQuery("#user_ui").prepend("<div class='user_xp'></div>");
+            }
+            for ( var i = usersXp; i < totalXp; i++ ) {
+                // build gray diamonds
+                jQuery("#user_ui").prepend("<div class='user_xp' style='opacity:.1;'></div>");
+            }
                 
         }
         function level(level) {
@@ -131,39 +131,39 @@ jQuery(document).ready(function(){
         //Start Current Tutorial
         function setTutorial() {
                         
-                //Set the current count
-                var tutorialProgress = localStorage.getItem('tutorialProgress');
-                if (tutorialProgress == totalXp){
-                
-                    //launch reward function
-                    chatBubble("Congrats! <span class='sub-text'>You beat the first lvl!</span><br/> CODE: APEX10 ","#top");
-                        
-                } else if (currentName == "undefined") {
-                
-                    //Grab  Tutorial Data
-                    var currentTutorial = usernameTutorial[0].content;
-                    var currentTarget = usernameTutorial[0].target;
-
-                    //Build Chat Bubble
-                    chatBubble(currentTutorial,currentTarget);
-                        
-                } else {
+            //Set the current count
+            var tutorialProgress = localStorage.getItem('tutorialProgress');
+            if (tutorialProgress == totalXp){
             
-                    //Grab Current Tutorial Data
-                    var currentTutorial = theTutorials[tutorialProgress].content;
-                    var currentTarget = theTutorials[tutorialProgress].target;
+                //launch reward function
+                chatBubble("Congrats! <span class='sub-text'>You beat the first lvl!</span><br/> CODE: APEX10 ","#top");
+                    
+            } else if (currentName == "undefined") {
+            
+                //Grab  Tutorial Data
+                var currentTutorial = usernameTutorial[0].content;
+                var currentTarget = usernameTutorial[0].target;
 
-                    //Build Chat Bubble
-                    chatBubble(currentTutorial,currentTarget);
-                        
-                }
+                //Build Chat Bubble
+                chatBubble(currentTutorial,currentTarget);
+                    
+            } else {
+        
+                //Grab Current Tutorial Data
+                var currentTutorial = theTutorials[tutorialProgress].content;
+                var currentTarget = theTutorials[tutorialProgress].target;
+
+                //Build Chat Bubble
+                chatBubble(currentTutorial,currentTarget);
+                    
+            }
         }
         
         //Cleanup Chat Bubble and Progress to Next Tutorial
         function nextTutorial() {
             
             //Remove Old
-            jQuery("#chat_bubble, #chat_bubble_mini").remove();
+            //jQuery("#chat_bubble, #chat_bubble_mini").css('opacity') = '0';
             
             //get count
             var currentProgress = localStorage.getItem('tutorialProgress');
